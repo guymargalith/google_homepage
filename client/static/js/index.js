@@ -26,20 +26,18 @@ function search(e) {
 	let searchTerm = mainSearch.value;
 	if (searchTerm) {
 		storeSearchResult(searchTerm);
-		location.href = "./search-results.html";
+		// location.href = "./search-results.html";
 	}
 }
 
 function storeSearchResult(searchTerm) {
-	const data = searchTerm;
-
 	const options = {
 		method: "PUT",
-		body: data,
+		body: JSON.stringify({ data: searchTerm }),
 		headers: {
 			"Content-Type": "application/json"
 		}
 	};
 
-	// fetch("http://localhost:3000/***ROUTE****", options);
+	fetch("http://localhost:3000/store", options);
 }
