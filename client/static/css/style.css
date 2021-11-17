@@ -8,7 +8,8 @@ body {
 }
 
 * {
-	font-family: Poppins;
+	font-family: arial, sans-serif;
+	font-size: 14px;
 }
 
 header {

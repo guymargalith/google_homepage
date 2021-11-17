@@ -40,6 +40,10 @@ function createResultSection(url, title, desc) {
 
 	let heading = document.createElement("h3");
 	heading.textContent = title;
+	heading.style.fontSize = "20px";
+	heading.style.paddingTop = "5px";
+	heading.style.marginBottom = "3px";
+	heading.style.fontWeight = "normal";
 
 	let descPara = document.createElement("p");
 	descPara.className = "description";
@@ -48,12 +52,15 @@ function createResultSection(url, title, desc) {
 	let link = document.createElement("a");
 	link.setAttribute("href", url);
 	link.appendChild(heading);
+	link.style.textDecoration = "none";
+	link.style.color = "#1a0dab";
 
 	let section = document.createElement("section");
 	section.className = "result";
 	section.appendChild(urlPara);
 	section.appendChild(link);
 	section.appendChild(descPara);
+	section.style.fontFamily = "arial, sans-serif";
 
 	let main = document.querySelector("main");
 	main.appendChild(section);
