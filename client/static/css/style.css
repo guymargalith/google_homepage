@@ -6,7 +6,8 @@ body {
 }
 
 * {
-	font-family: Arial;
+	font-family: arial, sans-serif;
+	font-size: 14px;
 }
 
 header {
