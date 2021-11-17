@@ -1,103 +1,46 @@
 html,
 body {
 	height: 100%;
+	width: 100%;
+	margin: 0;
 }
-
-body {
-	display: grid;
-	grid-template: 60px 1fr 95px / 1fr;
-}
-
-/* header */
 
 header {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	margin: 6px;
+	padding: 6px;
 }
 
-#header-right {
+.header {
 	display: flex;
 	align-items: center;
 }
 
-#apps-div {
+.right {
+	justify-content: flex-end;
+}
+
+.left {
+	justify-content: flex-start;
+}
+
+.icon-div {
 	height: 32px;
 	width: 32px;
 	border-radius: 50%;
 }
 
-#apps {
+.apps {
 	width: 16px;
 	margin: 8px;
 }
 
-#profile_pic {
+.profile_pic {
 	width: 32px;
 	border-radius: 50%;
 }
 
-/* main */
-
-main {
-	display: grid;
-	align-items: center;
-	justify-content: center;
-	grid-template: 1fr 140px 1fr / 584px;
-	height: 100%;
-	margin: auto;
-}
-
-#logo-div {
-	height: 100%;
+.footer {
 	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: flex-end;
-}
-
-#logo {
-	max-width: 272px;
-}
-
-section {
-	width: 100%;
-}
-
-input {
-	display: block;
-	width: 100%;
-}
-
-#buttons {
-	display: flex;
-	width: 100%;
-	justify-content: center;
-}
-
-/* footer */
-
-#footer {
-	display: grid;
-	align-items: center;
-	grid-template-columns: repeat(3, 1fr);
-}
-
-#location {
-	text-align: center;
-}
-
-#footer-left {
-	display: flex;
-	justify-content: flex-start;
-}
-
-#carbon {
-	text-align: center;
-}
-
-#footer-right {
-	display: flex;
-	justify-content: flex-end;
 }
