@@ -52,4 +52,19 @@ describe('API server', () => {
     it('responds to a unknown search name with a 404', (done) => {
         request(api).get('/search/latvia').expect(404).expect({}, done);
     });
+
+    it('uploads a value to the parameter', (done) => {
+        request(api).put('/store').send('pingu').expect(204, done);
+    })
+
+    it('saves parameter after upload', () => {
+        request(api).put('/store').send('pingu');
+        request(api).get('/store').expect(200).expect('pingu');
+    })
+
+    it('resets parameter', async () => {
+        await request(api).put('/store').send('pingu');
+        await request(api).put('/store').send('');
+        request(api).get('/store').expect(200).expect('');
+    })    
 })

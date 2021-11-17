@@ -1,8 +1,14 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
 html,
 body {
 	height: 100%;
 	width: 100%;
 	margin: 0;
+}
+
+* {
+	font-family: Poppins;
 }
 
 header {
@@ -11,6 +17,10 @@ header {
 	justify-content: space-between;
 	padding: 6px;
 }
+
+/* header a {
+
+} */
 
 .header {
 	display: flex;
@@ -43,4 +53,9 @@ header {
 
 .footer {
 	display: flex;
+	align-items: center;
+}
+
+footer {
+	background-color: rgb(224, 224, 224);
 }

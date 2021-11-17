@@ -43,11 +43,13 @@ input {
 #homepage-footer {
 	display: grid;
 	align-items: center;
-	grid-template-columns: repeat(3, 1fr);
+	grid-template: 1fr 1fr / repeat(3, 1fr);
 }
 
 #location {
 	text-align: center;
+	grid-area: 1 / 1 / 2 / 4;
+	border-bottom: 0.5px rgb(158, 158, 158) solid;
 }
 
 #carbon {
