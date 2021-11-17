@@ -12,6 +12,8 @@ function init() {
 	fetch(`http://localhost:3000/search/${searchTerm}`)
 		.then(response => response.json())
 		.then(data => addAllResults(data.sites));
+
+	// then delete entry from server?
 }
 
 function addAllResults(array) {
