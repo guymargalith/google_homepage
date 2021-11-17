@@ -8,7 +8,6 @@ searchButton.addEventListener("click", search);
 function feelingLucky(e) {
 	e.preventDefault();
 	let searchTerm = mainSearch.value;
-	console.log(searchTerm);
 	if (searchTerm.trim().toLowerCase() === "pingu") {
 		searchTerm = "pingu";
 	} else {

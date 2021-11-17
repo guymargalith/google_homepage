@@ -1,16 +1,11 @@
 function init() {
 	fetch("http://localhost:3000/store")
-		.then(response => {
-			console.log(response);
-			return response.json();
-		})
+		.then(response => response.json())
 		.then(displayResults);
 }
 
 function displayResults(data) {
 	let search;
-	console.log(data);
-
 	if (data.searchTerm.trim().toLowerCase() === "pingu") {
 		search = "pingu";
 	} else if (data.searchTerm) {

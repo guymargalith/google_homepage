@@ -1,7 +1,8 @@
 # Recreating Google
 
 An assignment to recreate the homepage of Google, done as part of LAP 1 assignment week in
-futureproofs Conway cohort. Find out all about JavaScript, whatever you search, and get some fun information if you search for "pingu"
+futureproof's Conway cohort. Find out all about JavaScript, whatever you search, and get some fun
+information if you search for "pingu"
 
 ## Installation & Usage
 
