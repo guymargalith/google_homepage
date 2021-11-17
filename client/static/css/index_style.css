@@ -1,7 +1,18 @@
 body {
 	display: grid;
-	grid-template: 60px 1fr 95px / 1fr;
+	grid-template: 60px 1fr 100px / 1fr;
 }
+
+a {
+	color: #70757a;
+	text-decoration: none;
+	margin: auto 20px;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
 main {
 	display: grid;
 	align-items: center;
@@ -21,6 +32,7 @@ main {
 
 #logo {
 	max-width: 272px;
+	margin-bottom: 20px;
 }
 
 section {
@@ -30,6 +42,10 @@ section {
 input {
 	display: block;
 	width: 100%;
+	border: 1px solid rgb(158, 158, 158);
+	padding: 10px 20px;
+	border-radius: 25px;
+	margin-bottom: 18px;
 }
 
 #buttons {
@@ -38,18 +54,33 @@ input {
 	justify-content: center;
 }
 
-/* footer */
+button {
+	margin: 5px 10px;
+	border: none;
+	padding: 14px 20px;
+	border-radius: 5px;
+	color: #3c4043;
+	background-color: #f8f9fa;
+	border: 1px solid #f8f9fa;
+}
+
+button:hover {
+	border: 1px solid #c5c5c5;
+	cursor: pointer;
+}
 
 #homepage-footer {
 	display: grid;
 	align-items: center;
-	grid-template: 1fr 1fr / repeat(3, 1fr);
+	grid-template: 50px 50px / repeat(3, 1fr);
+	color: #70757a;
+	height: 100%;
 }
 
 #location {
-	text-align: center;
 	grid-area: 1 / 1 / 2 / 4;
 	border-bottom: 0.5px rgb(158, 158, 158) solid;
+	padding-left: 40px;
 }
 
 #carbon {
