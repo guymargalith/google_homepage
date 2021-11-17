@@ -1,5 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
-
 html,
 body {
 	height: 100%;
@@ -30,10 +28,12 @@ header {
 
 .right {
 	justify-content: flex-end;
+	margin-right: 20px;
 }
 
 .left {
 	justify-content: flex-start;
+	margin-left: 20px;
 }
 
 .icon-div {
@@ -50,6 +50,7 @@ header {
 .profile_pic {
 	width: 32px;
 	border-radius: 50%;
+	margin: 0 10px;
 }
 
 .footer {

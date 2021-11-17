@@ -31,15 +31,13 @@ function search(e) {
 }
 
 function storeSearchResult(searchTerm) {
-	const data = searchTerm;
-
 	const options = {
 		method: "PUT",
-		body: data,
+		body: JSON.stringify({ searchTerm: searchTerm }),
 		headers: {
 			"Content-Type": "application/json"
 		}
 	};
 
-	// fetch("http://localhost:3000/***ROUTE****", options);
+	fetch("http://localhost:3000/store", options);
 }
