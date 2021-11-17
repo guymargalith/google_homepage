@@ -10,11 +10,9 @@ router.get('/', (req, res) => {
 
 router.get('/:name', (req, res) => {
     try{
-        console.log(req.params.name);
         const selectedSearch = Search.findByName(req.params.name);
         res.send(selectedSearch);
     } catch(err) {
-        console.log(req.params.name);
         res.status(404).send(err);
     };
 })
@@ -24,7 +22,6 @@ router.get('/:name/random', (req, res) => {
         const randomSite = Search.random(req.params.name);
         res.send(randomSite);
     } catch(err) {
-        console.log(err);
         res.status(404).send(err);
     };
 });

@@ -17,7 +17,6 @@ class Search {
             const search = new Search(aSearchData);
             return search;
         } catch(err){
-            console.log(err);
             throw new Error("Can't find that search entry");
         };
     };
