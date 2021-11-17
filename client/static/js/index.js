@@ -26,7 +26,7 @@ function search(e) {
 	let searchTerm = mainSearch.value;
 	if (searchTerm) {
 		storeSearchResult(searchTerm);
-		// location.href = "./search-results.html";
+		location.href = "./search-results.html";
 	}
 }
 
@@ -34,14 +34,12 @@ function storeSearchResult(searchTerm) {
 	const data = searchTerm;
 
 	const options = {
-		method: "POST",
+		method: "PUT",
 		body: data,
 		headers: {
 			"Content-Type": "application/json"
 		}
 	};
-
-	console.log(options);
 
 	// fetch("http://localhost:3000/***ROUTE****", options);
 }

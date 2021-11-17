@@ -1,6 +1,6 @@
 function init() {
 	let searchTerm = "pingu";
-	// fetch("http://localhost:3000/*****ROUTE*****")
+	// fetch("http://localhost:3000/search/store")
 	// .then(response => response.text())
 	// .then(data => data)
 	if (searchTerm.trim().toLowerCase() === "pingu") {
