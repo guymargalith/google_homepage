@@ -13,13 +13,20 @@ class Search {
 
     static findByName(name) {
         try {
-            const aSearchData = searchData.filter((search) => search.name.toLowerCase() === name)[0];
+            const aSearchData = searchData.filter((search) => search.name === name)[0];
             const search = new Search(aSearchData);
             return search;
         } catch(err){
-            throw new Error("That search topic isn't real");
+            console.log(err);
+            throw new Error("Can't find that search entry");
         };
     };
+    
+    static random(name){
+        let selectedSearch = this.findByName(name);
+        let int = Math.floor(Math.random() * selectedSearch.sites.length);
+        return selectedSearch.sites[int];
+    }
 }
 
 module.exports = Search;

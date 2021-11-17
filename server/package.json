@@ -15,7 +15,10 @@
     "supertest": "^6.1.6"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node index.js",
+    "dev": "nodemon index.js",
+    "test": "jest --silent --watchAll",
+    "coverage": "jest --coverage"
   },
   "author": "",
   "license": "ISC"

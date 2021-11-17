@@ -1,13 +1,34 @@
-class Website{
-    constructor(url, title, description){
-        this.url = url;
-        this.title = title;
-        this.description = description;
-    };
-};
-
-
-
 const searches = [
-    
+    {
+        name: 'javascript',
+        sites: [
+            {url: '', title: '', description: ''},
+            {url: '', title: '', description: ''},
+            {url: '', title: '', description: ''},
+            {url: '', title: '', description: ''},
+            {url: '', title: '', description: ''},
+            {url: '', title: '', description: ''},
+            {url: '', title: '', description: ''},
+            {url: '', title: '', description: ''},
+            {url: '', title: '', description: ''},
+            {url: '', title: '', description: ''}
+        ]
+    },
+    {
+        name: 'pingu',
+        sites: [
+            {url: '', title: '', description: ''},
+            {url: '', title: '', description: ''},
+            {url: '', title: '', description: ''},
+            {url: '', title: '', description: ''},
+            {url: '', title: '', description: ''},
+            {url: '', title: '', description: ''},
+            {url: '', title: '', description: ''},
+            {url: '', title: '', description: ''},
+            {url: '', title: '', description: ''},
+            {url: '', title: '', description: ''}
+        ]
+    }
 ]
+
+module.exports = searches;
