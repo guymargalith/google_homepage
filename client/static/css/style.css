@@ -1,0 +1,46 @@
+html,
+body {
+	height: 100%;
+	width: 100%;
+	margin: 0;
+}
+
+header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 6px;
+}
+
+.header {
+	display: flex;
+	align-items: center;
+}
+
+.right {
+	justify-content: flex-end;
+}
+
+.left {
+	justify-content: flex-start;
+}
+
+.icon-div {
+	height: 32px;
+	width: 32px;
+	border-radius: 50%;
+}
+
+.apps {
+	width: 16px;
+	margin: 8px;
+}
+
+.profile_pic {
+	width: 32px;
+	border-radius: 50%;
+}
+
+.footer {
+	display: flex;
+}
