@@ -1,0 +1,55 @@
+body {
+	display: grid;
+	grid-template: 60px 1fr 95px / 1fr;
+}
+main {
+	display: grid;
+	align-items: center;
+	justify-content: center;
+	grid-template: 1fr 140px 1fr / 584px;
+	height: 100%;
+	margin: auto;
+}
+
+#logo-div {
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: flex-end;
+}
+
+#logo {
+	max-width: 272px;
+}
+
+section {
+	width: 100%;
+}
+
+input {
+	display: block;
+	width: 100%;
+}
+
+#buttons {
+	display: flex;
+	width: 100%;
+	justify-content: center;
+}
+
+/* footer */
+
+#homepage-footer {
+	display: grid;
+	align-items: center;
+	grid-template-columns: repeat(3, 1fr);
+}
+
+#location {
+	text-align: center;
+}
+
+#carbon {
+	text-align: center;
+}
