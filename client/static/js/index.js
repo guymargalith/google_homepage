@@ -7,7 +7,7 @@ function feelingLucky(e) {
 	e.preventDefault();
 	let searchTerm = mainSearch.value;
 	console.log(searchTerm);
-	if (searchTerm.toLowerCase() === "pingu") {
+	if (searchTerm.trim().toLowerCase() === "pingu") {
 		searchTerm = "pingu";
 	} else {
 		searchTerm = "javascript";
