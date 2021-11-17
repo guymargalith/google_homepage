@@ -1,19 +1,34 @@
 function init() {
-	let searchTerm = "pingu";
-	// fetch("http://localhost:3000/search/store")
-	// .then(response => response.text())
-	// .then(data => data)
-	if (searchTerm.trim().toLowerCase() === "pingu") {
-		searchTerm = "pingu";
-	} else if (searchTerm) {
-		searchTerm = "javascript";
-	}
+	fetch("http://localhost:3000/store")
+		.then(response => {
+			console.log(response);
+			return response.json();
+		})
+		.then(data => {
+			let search;
+			console.log(data);
 
-	fetch(`http://localhost:3000/search/${searchTerm}`)
-		.then(response => response.json())
-		.then(data => addAllResults(data.sites));
+			if (data.searchTerm.trim().toLowerCase() === "pingu") {
+				search = "pingu";
+			} else if (data.searchTerm) {
+				search = "javascript";
+			}
 
-	// then delete entry from server?
+			fetch(`http://localhost:3000/search/${search}`)
+				.then(response => response.json())
+				.then(data => {
+					addAllResults(data.sites);
+					const options = {
+						method: "PUT",
+						body: JSON.stringify({ searchTerm: "" }),
+						headers: {
+							"Content-Type": "application/json"
+						}
+					};
+
+					fetch("http://localhost:3000/store", options);
+				});
+		});
 }
 
 function addAllResults(array) {

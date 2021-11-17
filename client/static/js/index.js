@@ -26,14 +26,14 @@ function search(e) {
 	let searchTerm = mainSearch.value;
 	if (searchTerm) {
 		storeSearchResult(searchTerm);
-		// location.href = "./search-results.html";
+		location.href = "./search-results.html";
 	}
 }
 
 function storeSearchResult(searchTerm) {
 	const options = {
 		method: "PUT",
-		body: JSON.stringify({ data: searchTerm }),
+		body: JSON.stringify({ searchTerm: searchTerm }),
 		headers: {
 			"Content-Type": "application/json"
 		}
