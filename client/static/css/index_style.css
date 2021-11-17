@@ -6,7 +6,6 @@ body {
 a {
 	color: #70757a;
 	text-decoration: none;
-	font-size: 13px;
 	margin: auto 20px;
 }
 
@@ -81,11 +80,9 @@ button:hover {
 #location {
 	grid-area: 1 / 1 / 2 / 4;
 	border-bottom: 0.5px rgb(158, 158, 158) solid;
-	font-size: 13px;
 	padding-left: 40px;
 }
 
 #carbon {
 	text-align: center;
-	font-size: 13px;
 }
