@@ -9,3 +9,20 @@ header {
 input {
 	width: 690px;
 }
+
+main {
+	margin-left: 100px;
+	width: 690px;
+}
+
+.url {
+	margin-bottom: 4px;
+}
+
+h3 {
+	margin: 4px 0;
+}
+
+.description {
+	margin-top: 4px;
+}
