@@ -6,20 +6,19 @@ function init() {
 
 function displayResults(data) {
 	let search = data.searchTerm.trim().toLowerCase();
-	try{
-		fetch(`http://localhost:3000/search/${search}`)
-		.then(response => response.json())
-		.then(data => {
-			addAllResults(data.sites);
-			clearSearchServer();
-		});
-	} catch(err) {
+	fetch(`http://localhost:3000/search/${search}`)
+	.then(response => response.json())
+	.then(data => {
+		addAllResults(data.sites);
 		clearSearchServer();
-		
-		console.log(err)
-	}
-
-	
+	})
+	.catch(e => {
+		let noResultsP = document.createElement("p");
+		noResultsP.textContent = "No results found for this search term";
+		noResultsP.style.fontSize = "20px";
+		let main = document.querySelector("main");
+		main.appendChild(noResultsP);
+	})
 }
 
 function clearSearchServer() {
@@ -35,15 +34,7 @@ function clearSearchServer() {
 }
 
 function addAllResults(array) {
-	if(array){
-		array.forEach(result => addResult(result));
-	} else {
-		let noResultsP = document.createElement("p");
-		noResultsP.textContent = "No results found for this search term";
-		noResultsP.style.fontSize = "20px";
-		let main = document.querySelector("main");
-		main.appendChild(noResultsP);
-	}
+	array.forEach(result => addResult(result));
 }
 
 function addResult(result) {

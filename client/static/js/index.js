@@ -9,18 +9,16 @@ function feelingLucky(e) {
 	e.preventDefault();
 	let searchTerm = mainSearch.value;
 	searchTerm = searchTerm.trim().toLowerCase();
-	try{
-		fetch(`http://localhost:3000/search/${searchTerm}/random`)
-		.then(response => response.json())
-		.then(data => {
+	fetch(`http://localhost:3000/search/${searchTerm}/random`)
+	.then(response => response.json())
+	.then(data => {
+		if(data.url){
 			window.location = data.url;
-			});
-	} catch(err){
-		storeSearchResult(searchTerm);
-		location.href = "./search-results.html"
-		console.log(err)
-	}
-	
+		} else {
+			storeSearchResult(searchTerm);
+			location.href = "./search-results.html";
+		}
+		});
 }
 
 function search(e) {
