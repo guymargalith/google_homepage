@@ -33,7 +33,6 @@ information if you search for "pingu"
 
 ## Future Features
 
-- Adding a 'no results' page if you search for something not in the database
 - Making the search bar in the search results page functional
 
 ## Collaborators
