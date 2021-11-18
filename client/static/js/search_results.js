@@ -6,27 +6,37 @@ function init() {
 
 function displayResults(data) {
 	let search = data.searchTerm.trim().toLowerCase();
-	try {
-		fetch(`http://localhost:3000/search/${search}`)
-			.then(response => response.json())
-			.then(data => {
-				addAllResults(data.sites);
-			});
-	} catch (err) {
-		console.log(err);
-	}
-}
 
-function addAllResults(array) {
-	if (array) {
-		array.forEach(result => addResult(result));
-	} else {
+	fetch(`http://localhost:3000/search/${search}`)
+	.then(response => response.json())
+	.then(data => {
+		addAllResults(data.sites);
+		clearSearchServer();
+	})
+	.catch(e => {
 		let noResultsP = document.createElement("p");
 		noResultsP.textContent = "No results found for this search term";
 		noResultsP.style.fontSize = "20px";
 		let main = document.querySelector("main");
 		main.appendChild(noResultsP);
-	}
+	})
+}
+
+function clearSearchServer() {
+	const options = {
+		method: "PUT",
+		body: JSON.stringify({ searchTerm: "" }),
+		headers: {
+			"Content-Type": "application/json"
+		}
+	};
+
+	fetch("http://localhost:3000/store", options);
+}
+
+function addAllResults(array) {
+	array.forEach(result => addResult(result));
+
 }
 
 function addResult(result) {
