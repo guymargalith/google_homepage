@@ -17,10 +17,6 @@ header {
 	padding: 6px;
 }
 
-/* header a {
-
-} */
-
 .header {
 	display: flex;
 	align-items: center;
