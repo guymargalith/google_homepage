@@ -6,6 +6,7 @@ function init() {
 
 function displayResults(data) {
 	let search = data.searchTerm.trim().toLowerCase();
+
 	fetch(`http://localhost:3000/search/${search}`)
 	.then(response => response.json())
 	.then(data => {
@@ -35,6 +36,7 @@ function clearSearchServer() {
 
 function addAllResults(array) {
 	array.forEach(result => addResult(result));
+
 }
 
 function addResult(result) {
