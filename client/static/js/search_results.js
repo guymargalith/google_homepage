@@ -16,20 +16,7 @@ function displayResults(data) {
 		.then(response => response.json())
 		.then(data => {
 			addAllResults(data.sites);
-			clearSearchServer();
 		});
-}
-
-function clearSearchServer() {
-	const options = {
-		method: "PUT",
-		body: JSON.stringify({ searchTerm: "" }),
-		headers: {
-			"Content-Type": "application/json"
-		}
-	};
-
-	fetch("http://localhost:3000/store", options);
 }
 
 function addAllResults(array) {
