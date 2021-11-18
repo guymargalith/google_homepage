@@ -1,7 +1,7 @@
 # Recreating Google
 
 An assignment to recreate the homepage of Google, done as part of LAP 1 assignment week in
-futureproof's Conway cohort. Find out all about JavaScript, whatever you search, and get some fun
+futureproof's Conway cohort. Find out all about JavaScript, and get some fun
 information if you search for "pingu"
 
 ## Installation & Usage
@@ -15,6 +15,7 @@ information if you search for "pingu"
 **Usage**
 
 - From the server folder, run `npm start` to launch the server
+- The available search terms are `javascript` and `pingu`, other search terms will not show results.
 - To make a second search, click on the google logo to return to the homepage and search again
 
 ## Challenges & Achievements
