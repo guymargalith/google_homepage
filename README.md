@@ -15,7 +15,7 @@ information if you search for "pingu"
 **Usage**
 
 - From the server folder, run `npm start` to launch the server
-- The available search terms are `javascript` and `pingu`, other search terms will not show results.
+- The available search terms are `javascript` and `pingu`, other search terms will show no results.
 - To make a second search, click on the google logo to return to the homepage and search again
 
 ## Challenges & Achievements
