@@ -8,16 +8,19 @@ searchButton.addEventListener("click", search);
 function feelingLucky(e) {
 	e.preventDefault();
 	let searchTerm = mainSearch.value;
-	if (searchTerm.trim().toLowerCase() === "pingu") {
-		searchTerm = "pingu";
-	} else {
-		searchTerm = "javascript";
-	}
-	fetch(`http://localhost:3000/search/${searchTerm}/random`)
+	searchTerm = searchTerm.trim().toLowerCase();
+	try{
+		fetch(`http://localhost:3000/search/${searchTerm}/random`)
 		.then(response => response.json())
 		.then(data => {
 			window.location = data.url;
-		});
+			});
+	} catch(err){
+		storeSearchResult(searchTerm);
+		location.href = "./search-results.html"
+		console.log(err)
+	}
+	
 }
 
 function search(e) {

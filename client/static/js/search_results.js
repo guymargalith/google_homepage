@@ -5,19 +5,21 @@ function init() {
 }
 
 function displayResults(data) {
-	let search;
-	if (data.searchTerm.trim().toLowerCase() === "pingu") {
-		search = "pingu";
-	} else if (data.searchTerm) {
-		search = "javascript";
-	}
-
-	fetch(`http://localhost:3000/search/${search}`)
+	let search = data.searchTerm.trim().toLowerCase();
+	try{
+		fetch(`http://localhost:3000/search/${search}`)
 		.then(response => response.json())
 		.then(data => {
 			addAllResults(data.sites);
 			clearSearchServer();
 		});
+	} catch(err) {
+		clearSearchServer();
+		
+		console.log(err)
+	}
+
+	
 }
 
 function clearSearchServer() {
@@ -33,7 +35,15 @@ function clearSearchServer() {
 }
 
 function addAllResults(array) {
-	array.forEach(result => addResult(result));
+	if(array){
+		array.forEach(result => addResult(result));
+	} else {
+		let noResultsP = document.createElement("p");
+		noResultsP.textContent = "No results found for this search term";
+		noResultsP.style.fontSize = "20px";
+		let main = document.querySelector("main");
+		main.appendChild(noResultsP);
+	}
 }
 
 function addResult(result) {
